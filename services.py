@@ -33,17 +33,17 @@ async def update_registration(id: int, registration: schemas.CreateRegistration,
     existing_registration = query.first()  # Fetch only the first result
 
     if not existing_registration:
-        raise HTTPException(status_code=404, detail="Registration not found")  # Use HTTPException for API responses
+        raise HTTPException(status_code=404, detail="Registration not found") 
 
     for key, value in registration.dict().items():
         if value is not None:
             setattr(existing_registration, key, value)
 
-    # Handle the date_of_birth field separately
+    # Handle the date_of_birth field separately -> this is tp maintain the format of the dob 
     dob = date.fromisoformat(registration.date_of_birth.isoformat())
     existing_registration.date_of_birth = dob
 
-    # Save the updated registration to the database
+    # add the updates to the registration to the database
     db.add(existing_registration)
     db.commit()
 
@@ -51,10 +51,10 @@ async def update_registration(id: int, registration: schemas.CreateRegistration,
 
 async def delete_registration(id: int, db: Session):
     query = db.query(models.Registration).filter(models.Registration.id == id)
-    existing_registration = query.first()  # Fetch only the first result
+    existing_registration = query.first()  
 
     if not existing_registration:
-        raise HTTPException(status_code=404, detail="Registration not found")  # Use HTTPException for API responses
+        raise HTTPException(status_code=404, detail="Registration not found") 
 
     db.delete(existing_registration)
     db.commit()
