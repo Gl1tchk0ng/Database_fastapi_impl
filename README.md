@@ -51,7 +51,7 @@ Execute "uvicorn main:app --reload" to start the FastAPI server.
 
 # Interact with the API:
 
-Use the SWAGGER UI by going to the http://127.0.0.1:8000/docs or we can also use Postman or curl and can send requests to the API endpoints and also we can interact with the API by using the basic postgresql cmds like 
+Use the SWAGGER UI by going to the http://127.0.0.1:8000/docs or we can also use Postman or curl and can send requests to the API endpoints and for the database point of view we can interact with the API by using the basic postgresql cmds like 
 "select * from "tabelname"
 we can see how the CRUD are working and if the data is persistant or not 
 
