@@ -19,11 +19,11 @@ Dependencies listed in requirements.txt
 
 # Code Structure:
 
-models.py: Defines database models for user registrations
-schemas.py: Defines Pydantic schemas for request and response validation
-database.py: Handles database interactions using SQLAlchemy
-services.py: Contains logic for CRUD operations
-main.py: Contains FastAPI application and endpoint definitions
+-->models.py: Defines database models for user registrations
+-->schemas.py: Defines Pydantic schemas for request and response validation
+-->database.py: Handles database interactions using SQLAlchemy
+-->services.py: Contains logic for CRUD operations
+-->main.py: Contains FastAPI application and endpoint definitions
 
 # Installation & Run :
 Clone this repository: https://github.com/Gl1tchk0ng/Database_fastapi_impl
