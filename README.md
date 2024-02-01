@@ -32,7 +32,7 @@ Clone this repository: https://github.com/Gl1tchk0ng/Database_fastapi_impl
 Option A: Local PostgreSQL, Ensure PostgreSQL is running on port 5432. No further setup is needed.
 Option B: Dockerized PostgreSQL
 
-For the docker implementation you have your Postgres running on your system (port 5432) also just to clarify the containerization is done so that the setup allows you to have more control and portability over your database environment by keeping it within a Docker container we can have an isolated database and by following the below steps we can host the DB on a container rather than locally as mentioned.  
+For the docker implementation you have your Postgres running on your system (port 5432) also just to clarify the containerization is done so that the setup allows you to have more control and portability over your database environment by keeping it within a Docker container and we can have an isolated database and by following the below steps we can host the DB on a container rather than locally as mentioned.  
 In the terminal (before initiating the venv run the following cmds on the same terminal or open a new one)
 
 1. docker pull postgres:alpine
